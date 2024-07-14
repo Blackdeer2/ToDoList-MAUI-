@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+             xmlns:local="clr-namespace:ToDoList.Extensions"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoList.NewReminderPage">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" HeightRequest="50">
+            <local:BlueUnderlinedText Text="Cancel" HorizontalOptions="StartAndExpand" Margin="10,0,0,0">
+                <local:BlueUnderlinedText.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoToMainPage"/>
+                </local:BlueUnderlinedText.GestureRecognizers>
+            </local:BlueUnderlinedText>
+            <Label Text="New reminder" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="15" TextColor="Black"/>
+            <local:BlueUnderlinedText Text="Add" HorizontalOptions="EndAndExpand" Margin="0,0,10,0"/>
+        </StackLayout>
+        <Frame CornerRadius="10" BackgroundColor="#ffffff" Margin="10,5" Padding="20,5,20,5">
+            <StackLayout>
+                <Entry x:Name="titleEtry" Placeholder="Title"></Entry>
+                <Editor x:Name="notseEditor"  Placeholder="Notes" AutoSize="TextChanges" HeightRequest="100"></Editor>
+            </StackLayout>
+        </Frame>
+        <Frame CornerRadius="10" BackgroundColor="#ffffff" Margin="10,5" Padding="15,5,20,5">
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Label Text="Details" VerticalOptions="StartAndExpand" FontSize="20" TextColor="Black" Margin="5,0,0,0"/>
+                <Image x:Name="arrowDetail" WidthRequest="20" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+        </Frame>
+        <Frame CornerRadius="10" BackgroundColor="#ffffff" Margin="10,5" Padding="20,5,20,5">
+            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                <Image x:Name="iconList" WidthRequest="30" VerticalOptions="Center" />
+                <Label Text="List" VerticalOptions="Center" FontSize="15" TextColor="Black"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                    <Label Text="Нагадування" VerticalOptions="Center" HorizontalOptions="StartAndExpand" 
+                                                   FontSize="15"/>
+                    <Image x:Name="arrowList" WidthRequest="15" VerticalOptions="Center" 
+                                                   HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+     xmlns:local="clr-namespace:ToDoList.Extensions"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoList.MainPage"
+     NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+    <StackLayout BackgroundColor="#f3f2f8" Padding="10,20,10,0">
+        <Frame Background="#e4e3e9" CornerRadius="10" Padding="5,0,0,0" Margin="0,0,0,20">
+            <StackLayout Orientation="Horizontal">
+                <Image x:Name="dandruff" WidthRequest="20"/>
+                <Entry Placeholder="Search" WidthRequest="300"/>
+            </StackLayout>
+        </Frame>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Frame Grid.Column="0" Grid.Row="0" Padding="0" Margin="10" CornerRadius="10" HasShadow="False" BorderColor="Transparent">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoToToday"/>
+                    </Frame.GestureRecognizers>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Image x:Name="toDay" WidthRequest="50" HorizontalOptions="StartAndExpand" />
+                            <Label Text="0" FontSize="35" FontAttributes="Bold" TextColor="Black" 
+                                   HorizontalOptions="EndAndExpand" Margin="0,0,20,0"/>
+                        </StackLayout>
+                        <Label Text="Today" FontSize="15" FontAttributes="Bold" Margin="10,0,0,0" />
+                    </StackLayout>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="0" Padding="0" Margin="10" CornerRadius="10" HasShadow="False" BorderColor="Transparent">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoToSchedule" />
+                    </Frame.GestureRecognizers>
+                    <StackLayout >
+                        <StackLayout Orientation="Horizontal">
+                            <Image x:Name="schedule" WidthRequest="50" HorizontalOptions="StartAndExpand" />
+                            <Label Text="0" FontSize="35" FontAttributes="Bold" TextColor="Black" 
+                                   HorizontalOptions="EndAndExpand" Margin="0,0,20,0"/>
+                        </StackLayout>
+                        <Label Text="With schedule" FontSize="15" FontAttributes="Bold" Margin="10,0,0,0" />
+                    </StackLayout>
+                </Frame>
+                <Frame Grid.Column="0" Grid.Row="1" Padding="0" Margin="10" CornerRadius="10" HasShadow="False" BorderColor="Transparent">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoToAll" />
+                    </Frame.GestureRecognizers>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Image x:Name="all" WidthRequest="50" HorizontalOptions="StartAndExpand" />
+                            <Label Text="0" FontSize="35" FontAttributes="Bold" TextColor="Black" 
+                                   HorizontalOptions="EndAndExpand" Margin="0,0,20,0"/>
+                        </StackLayout>
+                        <Label Text="All" FontSize="15" FontAttributes="Bold" Margin="10,0,0,0" />
+                    </StackLayout>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="1" Padding="0" Margin="10" CornerRadius="10" HasShadow="False" BorderColor="Transparent">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoToExecuted" />
+                    </Frame.GestureRecognizers>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Image x:Name="executed" WidthRequest="50" HorizontalOptions="StartAndExpand" />
+                        </StackLayout>
+                        <Label Text="Executed" FontSize="15" FontAttributes="Bold" Margin="10,0,0,0" />
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            <Entry x:Name="listNameEntry" Placeholder="List Name"/>
+            <Button Text="add list" Clicked="OnSaveCliked"/>
+            <Label Text="My lists" FontSize="25" FontAttributes="Bold" TextColor="Black"/>
+            <Frame BackgroundColor="#ffffff" CornerRadius="10" Padding="10,5">
+                <ScrollView>
+                    <ListView x:Name="listview" ItemSelected="listview_ItemSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="{Binding IconList}" x:Name="iconList" WidthRequest="30" VerticalOptions="Center"/>
+                                        <Label Text="{Binding Name}" VerticalOptions="Center" FontSize="15" TextColor="Black"/>
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                            <Label Text="{Binding Id}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" 
+                                               FontSize="15"/>
+                                            <Label Text="{Binding Count}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" 
+                                               FontSize="15"/>
+                                            <Image x:Name="iconArrowList" Source="{Binding IconArrowList}" WidthRequest="20" VerticalOptions="Center" 
+                                               HorizontalOptions="EndAndExpand" Margin="0,0,10,0"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <ViewCell.ContextActions>
+                                        <MenuItem Text="Info" Clicked="InfoClicked" CommandParameter="{Binding .}"/>
+                                        <MenuItem Text="Delete" Clicked="DeleteMyList" IsDestructive="True" CommandParameter="{Binding .}"/>
+                                    </ViewCell.ContextActions>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollView>
+            </Frame>
+        </StackLayout>
+            <AbsoluteLayout  VerticalOptions="EndAndExpand" BackgroundColor="#f3f2f8">
+                <StackLayout Orientation="Horizontal" 
+             AbsoluteLayout.LayoutBounds="5, 1, 1, 50" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional">
+                    <Frame BackgroundColor="#dde4ec" Padding="1,0" CornerRadius="10"  VerticalOptions="CenterAndExpand" HasShadow="False" BorderColor="Transparent">
+                        <StackLayout Orientation="Horizontal" Padding="0">
+                            <Image x:Name="newReminder" WidthRequest="30" VerticalOptions="Center"/>
+                            <Label Text="New Reminder" TextColor="#226bea" FontAttributes="Bold" VerticalOptions="Center" Margin="5,0"/>
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GoToNewReminder" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <local:BlueUnderlinedText Text="Add List">
+                        <local:BlueUnderlinedText.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GoToAddListPage"/>
+                        </local:BlueUnderlinedText.GestureRecognizers>
+                    </local:BlueUnderlinedText>
+                </StackLayout>
+            </AbsoluteLayout>
+        </StackLayout>
+        
+    </ScrollView>
+    
+</ContentPage>

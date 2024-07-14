@@ -1,0 +1,95 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ToDoList
+build_property.ProjectDir = C:\VOVA\C#\Code\ToDoList\ToDoList\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/VOVA/C\#/Code/ToDoList/ToDoList/AddListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoList.AddListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AddListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AddListPage.xaml
+
+[C:/VOVA/C\#/Code/ToDoList/ToDoList/All.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoList.All.xaml
+build_metadata.AdditionalFiles.TargetPath = All.xaml
+build_metadata.AdditionalFiles.RelativePath = All.xaml
+
+[C:/VOVA/C\#/Code/ToDoList/ToDoList/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoList.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/VOVA/C\#/Code/ToDoList/ToDoList/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoList.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/VOVA/C\#/Code/ToDoList/ToDoList/Executed.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoList.Executed.xaml
+build_metadata.AdditionalFiles.TargetPath = Executed.xaml
+build_metadata.AdditionalFiles.RelativePath = Executed.xaml
+
+[C:/VOVA/C\#/Code/ToDoList/ToDoList/Extensions/BlueUnderlinedText.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoList.Extensions.BlueUnderlinedText.xaml
+build_metadata.AdditionalFiles.TargetPath = Extensions\BlueUnderlinedText.xaml
+build_metadata.AdditionalFiles.RelativePath = Extensions\BlueUnderlinedText.xaml
+
+[C:/VOVA/C\#/Code/ToDoList/ToDoList/ListDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoList.ListDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ListDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ListDetailPage.xaml
+
+[C:/VOVA/C\#/Code/ToDoList/ToDoList/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoList.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/VOVA/C\#/Code/ToDoList/ToDoList/NewReminderPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoList.NewReminderPage.xaml
+build_metadata.AdditionalFiles.TargetPath = NewReminderPage.xaml
+build_metadata.AdditionalFiles.RelativePath = NewReminderPage.xaml
+
+[C:/VOVA/C\#/Code/ToDoList/ToDoList/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoList.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/VOVA/C\#/Code/ToDoList/ToDoList/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoList.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/VOVA/C\#/Code/ToDoList/ToDoList/Schedule.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoList.Schedule.xaml
+build_metadata.AdditionalFiles.TargetPath = Schedule.xaml
+build_metadata.AdditionalFiles.RelativePath = Schedule.xaml
+
+[C:/VOVA/C\#/Code/ToDoList/ToDoList/Today.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoList.Today.xaml
+build_metadata.AdditionalFiles.TargetPath = Today.xaml
+build_metadata.AdditionalFiles.RelativePath = Today.xaml

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Label  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoList.Extensions.BlueUnderlinedText"
+             
+	Text="{Binding Label}" TextColor="#226bea"  FontAttributes="Bold" HorizontalOptions="EndAndExpand" Margin="0,0,5,0"
+	VerticalOptions="Center" TextDecorations="Underline"
+	>
+	</Label >

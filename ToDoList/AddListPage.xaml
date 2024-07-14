@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+             xmlns:local="clr-namespace:ToDoList.Extensions"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoList.AddListPage">
+
+    <StackLayout BackgroundColor="#f3f2f8" Padding="10,20,10,0">
+        <StackLayout Orientation="Horizontal" HeightRequest="50">
+            <local:BlueUnderlinedText Text="Cancel" HorizontalOptions="StartAndExpand" Margin="10,0,0,0">
+                <local:BlueUnderlinedText.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoToMainPage"/>
+                </local:BlueUnderlinedText.GestureRecognizers>
+            </local:BlueUnderlinedText>
+            <Label Text="New List" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="15" TextColor="Black"/>
+            <local:BlueUnderlinedText Text="Done" HorizontalOptions="EndAndExpand" Margin="0,0,10,0"/>
+        </StackLayout>
+        <Frame BorderColor="Transparent"
+                    CornerRadius="10">
+            <StackLayout>
+                <Image x:Name="iconList" WidthRequest="90" Margin="0,0,0,15"/>
+                <Frame  HorizontalOptions="CenterAndExpand" 
+                        VerticalOptions="EndAndExpand" 
+                        Padding="0" 
+                        BorderColor="Transparent"
+                        Background="#e4e4e4"
+                        CornerRadius="10"
+                        >
+                    <Entry Placeholder="List Name" HorizontalOptions="FillAndExpand" VerticalOptions="Center"></Entry>
+                </Frame>
+            </StackLayout>
+        </Frame>
+        <StackLayout>
+            <Frame BorderColor="Transparent"
+                    CornerRadius="10">
+                <StackLayout>
+                    <Frame  HorizontalOptions="CenterAndExpand" 
+                        VerticalOptions="EndAndExpand" 
+                        Padding="0" 
+                        BorderColor="Transparent"
+                        Background="#e4e4e4"
+                        CornerRadius="10"
+                        >
+                        <Entry Placeholder="List Name" HorizontalOptions="FillAndExpand" VerticalOptions="Center"></Entry>
+                    </Frame>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
